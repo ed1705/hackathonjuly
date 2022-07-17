@@ -1,6 +1,14 @@
+// -----------
+// use let and const instead of var
+// -------------
+
 var dropTarget = document.querySelector(".wrapper");
 var draggables = document.querySelectorAll(".task");
 
+
+// -----------
+// wrap the loop in a function
+// -------------
 
 for(let i = 0; i < draggables.length; i++) {
   draggables[i].addEventListener("dragstart", function (ev) {
@@ -9,8 +17,6 @@ for(let i = 0; i < draggables.length; i++) {
 }
 
 /*
-
-
 Where to Drop - ondragover
 The ondragover event specifies where the dragged data can be dropped.
 */
@@ -27,12 +33,15 @@ dropTarget.addEventListener('drop', function(ev) {
   
   if (droppable) {
     ev.target.appendChild(document.getElementById(srcId));
-  }
- 
-
+  } 
 });
- const element = document.getElementById("myBtn");
+
+
+const element = document.getElementById("myBtn");
+
 element.addEventListener("click", j);
+
+
 function j () {
     x = (document.getElementById(box2));
     console.log(box2);
